@@ -36,3 +36,7 @@
     transform: rotate(360deg);
   }
 }
+
+.ImagenCard {
+    width: 18rem;
+}

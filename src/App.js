@@ -1,18 +1,12 @@
 import "./App.css";
-import Navbar from "./components/NavBar";
-import Cartwidget from "./components/CartWidget";
 import Itemlistcontainer from "./components/ItemListContainer";
-
-const name = "Julian";
+import { Layout } from "./components/Layout";
 
 function App() {
   return (
-    <div className="App">
-      <Navbar>
-        <Cartwidget />
-      </Navbar>
-      <Itemlistcontainer name={name} />
-    </div>
+    <Layout>
+      <Itemlistcontainer />
+    </Layout>
   );
 }
 
