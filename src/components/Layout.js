@@ -3,7 +3,7 @@ import Cartwidget from "./CartWidget";
 
 export const Layout = ({ children }) => {
   return (
-    <main>
+    <main className="container">
       <NavbarComponent>
         <Cartwidget />
       </NavbarComponent>
