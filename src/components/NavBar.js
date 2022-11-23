@@ -9,7 +9,7 @@ function navBar() {
           CoffeeShop
         </Link>
         <button
-          className="navbar-toggler"
+          className="navbar-toggler mx-5"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
