@@ -1,6 +1,6 @@
-import Item from "./Item";
+import { Item } from "./Item";
 
-const ItemList = ({ products }) => {
+export const ItemList = ({ products }) => {
   return (
     <div>
       {products.map((product) => (
@@ -9,5 +9,3 @@ const ItemList = ({ products }) => {
     </div>
   );
 };
-
-export default ItemList;

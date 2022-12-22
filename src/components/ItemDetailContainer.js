@@ -1,30 +1,19 @@
-import { useEffect, useState } from "react";
+import { useGetItem } from "../hooks/useGetItem";
 import ItemDetail from "./ItemDetail";
-import { useParams } from "react-router-dom";
-import { item as itemData } from "../data/item.data";
+import { Loading } from "./Loading";
 
 const ItemDetailContainer = () => {
-  const { id } = useParams();
-  const [item, setItem] = useState(null);
-
-  useEffect(() => {
-    new Promise((resolve) => setTimeout(() => resolve(itemData), 2000)).then(
-      (data) => {
-        if (id) {
-          const ids = data.find((product) => product.id === id);
-          setItem(ids);
-        } else {
-          setItem(data);
-        }
-      }
-    );
-  }, [id]);
+  const item = useGetItem();
 
   if (!item) {
-    return <p>Loading...</p>;
+    return <Loading />;
   }
 
-  return <ItemDetail item={item} />;
+  return (
+    <div className="flex justify-center items-center ">
+      <ItemDetail item={item} />
+    </div>
+  );
 };
 
 export default ItemDetailContainer;

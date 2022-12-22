@@ -1,11 +1,11 @@
 import "./App.css";
-import Itemlistcontainer from "./components/ItemListContainer";
+import { ItemListContainer } from "./components/ItemListContainer";
 import { Layout } from "./components/Layout";
 
 function App() {
   return (
     <Layout>
-      <Itemlistcontainer />
+      <ItemListContainer />
     </Layout>
   );
 }

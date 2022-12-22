@@ -3,13 +3,29 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 /* import App from "./App"; */
 import reportWebVitals from "./reportWebVitals";
+import { CartContextProvider } from "./context/cartContext";
 import { RouterProvider } from "react-router-dom";
 import { router } from "./router";
+
+import { initializeApp } from "firebase/app";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyDm9GiFgEpZ_U66XrR9FncK36KBwM3TGDE",
+  authDomain: "ecommerce-para-coder-adc70.firebaseapp.com",
+  projectId: "ecommerce-para-coder-adc70",
+  storageBucket: "ecommerce-para-coder-adc70.appspot.com",
+  messagingSenderId: "992438163876",
+  appId: "1:992438163876:web:4e6ccfbb9392c7f3418931",
+};
+
+initializeApp(firebaseConfig);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <CartContextProvider>
+      <RouterProvider router={router} />
+    </CartContextProvider>
   </React.StrictMode>
 );
 

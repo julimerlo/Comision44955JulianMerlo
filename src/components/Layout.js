@@ -1,11 +1,11 @@
 import NavbarComponent from "./NavBar";
-import Cartwidget from "./CartWidget";
+import CartWidget from "./CartWidget";
 
 export const Layout = ({ children }) => {
   return (
     <main className="container">
       <NavbarComponent>
-        <Cartwidget />
+        <CartWidget />
       </NavbarComponent>
       {children}
     </main>

@@ -1,50 +1,17 @@
-import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useGetItem } from "../hooks/useGetItem";
+import { ItemList } from "./ItemList";
+import { Loading } from "./Loading";
 
-// Own components
-import ItemList from "./ItemList";
+export const ItemListContainer = () => {
+  const items = useGetItem();
 
-// Data
-import { item } from "../data/item.data";
-
-const ItemListContainer = () => {
-  const { category } = useParams();
-  const [products, setProducts] = useState([]);
-
-  useEffect(() => {
-    new Promise((resolve) =>
-      setTimeout(() => {
-        resolve(item);
-      }, 2000)
-    ).then((data) => {
-      if (category) {
-        const categories = data.filter(
-          (product) => product.category === category
-        );
-        setProducts(categories);
-      } else {
-        setProducts(data);
-      }
-    });
-  }, [category]);
-
-  if (products.length === 0) {
-    return <p>Loading...</p>;
+  if (!items) {
+    return <Loading />;
   }
 
   return (
     <div className="h-full">
-      <ItemList products={products} />
+      <ItemList products={items} />
     </div>
   );
 };
-
-export default ItemListContainer;
-
-/* function ItemListContainer({ name }) {
-  return (
-    <div className="alert alert-success" role="alert">
-      <h2>{`Bienvenido ${name} a la tienda del CAFE!`}</h2>
-    </div>
-  );
-} */
