@@ -1,21 +1,18 @@
 export const ItemCount = ({ count, handleCount }) => {
   return (
-    <div className="flex mt-10 w-4/5 bg-gray-200 rounded">
+    <div>
       <button
         onClick={() => handleCount("minus")}
-        className="flex justify-center items-center p-2 w-2/5 h-full bg-dark text-white"
+        className="p-3 mb-2 bg-primary text-white"
       >
         -
       </button>
-      <span
-        id="counter"
-        className="flex flex-1 justify-center items-center mx-4 font-bold"
-      >
+      <span id="counter" className="p-3 mb-2">
         {count}
       </span>
       <button
         onClick={() => handleCount("plus")}
-        className="flex justify-center items-center p-2 w-2/5 h-full bg-dark text-white"
+        className="p-3 mb-2 bg-primary text-white"
       >
         +
       </button>

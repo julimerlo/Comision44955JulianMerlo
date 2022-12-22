@@ -44,3 +44,11 @@
 .border {
   border: 1px solid black;
 }
+
+.imgSizeDetail {
+  max-width: 500px;
+}
+
+.imgSize {
+  max-width: 400px;
+}

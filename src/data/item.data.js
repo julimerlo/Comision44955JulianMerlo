@@ -1,4 +1,4 @@
-import Catuairojo from "../assets/images/catuairojo.png";
+/* import Catuairojo from "../assets/images/catuairojo.png";
 import Colombia from "../assets/images/colombia.png";
 import Etiopia from "../assets/images/etiopia.png";
 import Houseblend from "../assets/images/houseblend.png";
@@ -78,3 +78,4 @@ export const item = [
     img: Oscarmood,
   },
 ];
+ */

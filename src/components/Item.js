@@ -18,30 +18,19 @@ export const Item = ({ product, quantityAdded }) => {
   }
 
   return (
-    <div
-      onClick={handleNavigate}
-      className="flex flex-col w-[200px] h-[350px] bg-white rounded p-4 shadow cursor-pointer transition-all hover:shadow-lg"
-    >
-      <div className="flex flex-col flex-1">
-        <img
-          src={img}
-          className="w-full h-[100px] object-cover mb-2"
-          alt="Product"
-        />
-        <span className="text-2xl font-bold">
-          {product.name.length > 20 ? `${title} ...` : product.name}
-        </span>
-        <hr className="mb-2" />
-        <p className="mb-2">
-          {product.description.length > 30
-            ? `${description} ...`
-            : product.description}
-        </p>
-      </div>
-      <div className="flex flex-col">
-        <hr className="mb-2" />
-        <div className="flex justify-between items-center">
-          <span className="font-bold">${product.price}</span>
+    <div onClick={handleNavigate}>
+      <div className="card" class="imgClass">
+        <img src={img} class="imgSize" alt="Product" />
+        <div className="card-body">
+          <span className="card-title">
+            {product.name.length > 20 ? `${title} ...` : product.name}
+          </span>
+          <p>
+            {product.description.length > 80
+              ? `${description} ...`
+              : product.description}
+          </p>
+          <span className="card-text">${product.price}</span>
           <span
             className={product.stock === 0 ? "text-xs text-red-500" : "text-xs"}
           >

@@ -14,11 +14,7 @@ const CartWidget = () => {
           Carrito <i className="bi bi-cart"></i>
           <span>0</span>
         </button>
-        {count > 0 && (
-          <span className="absolute w-4 h-4 bottom-0 -right-2 rounded-full flex justify-center items-center bg-white/70">
-            {count}
-          </span>
-        )}
+        {count > 0 && <span>{count}</span>}
       </Link>
     </div>
   );
