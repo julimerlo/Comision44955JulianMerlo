@@ -34,7 +34,7 @@ const ItemDetail = ({ item }) => {
     <div>
       {/* Item image */}
       <div>
-        {!img ? <Loading /> : <img class="imgSize" src={img} alt={item.name} />}
+        {!img ? <Loading /> : <img className="imgSize" src={img} alt={item.name} />}
       </div>
 
       {/* Item description */}

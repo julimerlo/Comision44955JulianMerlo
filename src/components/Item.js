@@ -18,9 +18,9 @@ export const Item = ({ product, quantityAdded }) => {
   }
 
   return (
-    <div onClick={handleNavigate}>
-      <div className="card" class="imgClass">
-        <img src={img} class="imgSize" alt="Product" />
+    <div onClick={handleNavigate} className="col-3 mb-4">
+      <div className="card imgClass">
+        <img src={img} className="imgSize" alt="Product" />
         <div className="card-body">
           <span className="card-title">
             {product.name.length > 20 ? `${title} ...` : product.name}
@@ -30,8 +30,8 @@ export const Item = ({ product, quantityAdded }) => {
               ? `${description} ...`
               : product.description}
           </p>
-          <span className="card-text">${product.price}</span>
-          <span
+          <p className="card-text">${product.price}</p>
+          <p
             className={product.stock === 0 ? "text-xs text-red-500" : "text-xs"}
           >
             {product.stock === 0
@@ -39,7 +39,7 @@ export const Item = ({ product, quantityAdded }) => {
               : quantityAdded
               ? `Agregados: ${quantityAdded}`
               : `En Stock: ${product.stock}`}
-          </span>
+          </p>
         </div>
       </div>
     </div>

@@ -21,21 +21,21 @@ function navBar() {
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav px-5">
-            <li className="nav-item">
-              <Link className="nav-link px-5" aria-current="page" to="/">
+            <Link className="nav-link px-5" aria-current="page" to="/">
+              <li className="nav-item">
                 Inicio
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link px-5" to="/category/cafe">
+              </li>
+            </Link>
+            <Link className="nav-link px-5" to="/category/cafe">
+              <li className="nav-item">
                 Cafe
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link px-5" to="/category/maquinas">
+              </li>
+            </Link>
+            <Link className="nav-link px-5" to="/category/maquinas">
+              <li className="nav-item">
                 Maquinas
-              </Link>
-            </li>
+              </li>
+            </Link>
           </ul>
         </div>
         <CartWidget className="px-5" />

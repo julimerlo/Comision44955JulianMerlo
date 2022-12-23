@@ -12,9 +12,8 @@ const CartWidget = () => {
       <Link to="/cart">
         <button className="nav-link " id="open" href="#">
           Carrito <i className="bi bi-cart"></i>
-          <span>0</span>
+          <span>{count}</span>
         </button>
-        {count > 0 && <span>{count}</span>}
       </Link>
     </div>
   );

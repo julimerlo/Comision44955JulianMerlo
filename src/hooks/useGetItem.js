@@ -47,8 +47,7 @@ export const useGetItem = () => {
       setData(result.docs.map((doc) => ({ id: doc.id, ...doc.data() })))
     );
 
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [category, id, ref]);
 
   return data;
 };

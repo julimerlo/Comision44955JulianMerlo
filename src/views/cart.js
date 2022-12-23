@@ -28,7 +28,7 @@ const CartView = () => {
       <div>
         {productsAdded.length === 0 ? (
           <div>
-            <img src={EmptyCart} alt="Empty Cart" class="imgSize" />
+            <img src={EmptyCart} alt="Empty Cart" className="imgSize" />
             <h1 className="p-3 mb-2 bg-info text-dark">
               No has agregado productos
             </h1>
@@ -37,13 +37,13 @@ const CartView = () => {
             </button>
           </div>
         ) : (
-          <div>
-            <div>
+          <div className="container">
+            <div className="row">
               {productsAdded.map((product) => {
                 const quantityAdded = product.quantityAdded;
 
                 return (
-                  <div>
+                  <div key={product.item.id} className="col-3">
                     <Item
                       product={product.item}
                       quantityAdded={quantityAdded}

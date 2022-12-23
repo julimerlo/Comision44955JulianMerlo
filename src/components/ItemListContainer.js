@@ -10,8 +10,12 @@ export const ItemListContainer = () => {
   }
 
   return (
-    <div className="h-full">
-      <ItemList products={items} />
+    <div className="h-full container mt-4">
+      <div className="row">
+        <div className="col-12">
+          <ItemList products={items} />
+        </div>
+      </div>
     </div>
   );
 };
